@@ -100,3 +100,36 @@ body {
     transform: translateY(0);
     opacity: 1;
 }
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .bg-white {
+    background-color: #1f1f1f;
+}
+
+body.dark .text-gray-900 {
+    color: #e0e0e0;
+}
+
+body.dark .scroll-to-top {
+    background-color: #444;
+}
+
+body.dark .scroll-to-top.visible {
+    background-color: #333;
+}
+
+body.dark .btn-guest-list {
+    background-color: #ffff;
+    color: #121212;
+}
+
+body.dark .darkModeToggle {
+    background-color: #333;
+    color: #121212;
+}
+
