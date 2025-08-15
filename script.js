@@ -76,3 +76,28 @@ function scrollToTop() {
 // Event Listeners
 window.addEventListener('scroll', toggleScrollButton);
 scrollToTopBtn.addEventListener('click', scrollToTop);
+
+// Dark Mode Persistence and Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Check if dark mode is enabled in localStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
+    darkModeToggle.textContent = '🌞'; // Change to Sun icon if dark mode is enabled
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+    
+    // Toggle icon based on dark mode status
+    if (document.body.classList.contains('dark')) {
+        darkModeToggle.textContent = '🌞'; // Sun icon for dark mode
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        darkModeToggle.textContent = '🌙'; // Moon icon for light mode
+        localStorage.removeItem('darkMode');
+    }
+}
+
+// Event Listener for Dark Mode Toggle
+darkModeToggle.addEventListener('click', toggleDarkMode);
