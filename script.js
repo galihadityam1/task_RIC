@@ -32,7 +32,6 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-
 // Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
@@ -55,3 +54,25 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// Scroll to Top Functionality
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+function toggleScrollButton() {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Event Listeners
+window.addEventListener('scroll', toggleScrollButton);
+scrollToTopBtn.addEventListener('click', scrollToTop);

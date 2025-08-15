@@ -15,7 +15,7 @@
     <!-- Header Section -->
     <header class="mx-auto px-4 pt-8 animate-fade-in-up">
         <div class="flex items-center">
-            <h1 class="text-4xl font-bold">
+            <h1 class="text-4xl font-black">
                 AN INVITATION <br> TO THE HIDDEN
             </h1>
         </div>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square flex items-center justify-center"
-                onclick="openModal(this.querySelector('img').src, 'Cocktails Menu')">
+                onclick="openModal(this.querySelector('img').src, 'Neon Light')">
                 <img src="https://i.etsystatic.com/8409770/r/il/3a5d2f/6223685548/il_fullxfull.6223685548_n2s8.jpg"
                     alt="Cocktails menu" class="w-full h-full object-cover">
             </div>
@@ -123,8 +123,12 @@
             </div>
         </div>
     </div>
-    </div>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="scroll-to-top fixed bottom-6 right-6 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors z-40">
+        ↑
+    </button>
 </body>
 
 </html>

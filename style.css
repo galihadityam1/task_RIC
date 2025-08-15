@@ -88,3 +88,15 @@ body {
 .modal:not(.hidden) .modal-content {
     transform: scale(1);
 }
+
+/* Scroll to top button */
+.scroll-to-top {
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.scroll-to-top.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
