@@ -13,9 +13,9 @@
 
 <body class="bg-white font-inter text-gray-900">
     <!-- Header Section -->
-    <header class="mx-auto px-4 pt-8">
+    <header class="mx-auto px-4 pt-8 animate-fade-in-up">
         <div class="flex items-center">
-            <h1 class="text-4xl font-bold">
+            <h1 class="text-4xl font-black">
                 AN INVITATION <br> TO THE HIDDEN
             </h1>
         </div>
@@ -29,7 +29,7 @@
                     alt="Cooking Italian Food" class="w-full h-full object-cover">
             </div>
         </div>
-        <div class="space-y-4 flex px-10 pt-4">
+        <div class="space-y-4 flex px-10 pt-4 animate-fade-in-up">
             <div class="flex flex-row gap-4">
                 <div class="flex flex-col">
                     <span class="text-xs font-medium tracking-wider">CURATED SELECTION OF</span>
@@ -49,38 +49,66 @@
     </section>
 
     <!-- Behind Section -->
-    <section class="mx-auto px-4 py-8">
+    <section class="mx-auto px-4 py-8 animate-fade-in-up">
         <div class="text-center mb-12 animate-fade-in-up">
             <h2 class="font-playfair font-black text-4xl md:text-5xl mb-2">BEHIND</h2>
             <p class="text-sm tracking-wider font-bold">Closed Doors</p>
             <p class="text-sm leading-relaxed max-w-[650px] mx-auto mt-4 opacity-80">
-                Our speakeasy offers an atmosphere that's both sleek and relaxed, perfect for those who appreciate the finer things in life. Whether you're here for a quiet drink or to linger into the night, every moment feels exclusive.
+                Our speakeasy offers an atmosphere that's both sleek and relaxed, perfect for those who appreciate the
+                finer things in life. Whether you're here for a quiet drink or to linger into the night, every moment
+                feels exclusive.
             </p>
         </div>
-    
+
         <!-- Image Gallery -->
         <div class="gallery-grid animate-fade-in-up">
             <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square"
-            onclick="openModal(this.querySelector('img').src, 'Dark atmospheric lighting')">
-                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480" alt="Dark atmospheric lighting" class="w-full h-full object-cover">
+                onclick="openModal(this.querySelector('img').src, 'Dark Ambiance')">
+                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480"
+                    alt="Dark atmospheric lighting" class="w-full h-full object-cover">
             </div>
-            <div class="bg-gray-200 rounded-lg overflow-hidden image-hover cursor-pointer aspect-square">
-                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480" alt="Dark atmospheric lighting" class="w-full h-full object-cover">
+
+            <div class="bg-gray-200 rounded-lg overflow-hidden image-hover cursor-pointer aspect-square"
+                onclick="openModal(this.querySelector('img').src, 'Premium Wine')">
+                <img src="https://img.freepik.com/premium-photo/empty-wine-botte-with-mock-up-place-white-background-product-alcohol-beverage-advertisement-concept-3d-rendering_670147-106100.jpg"
+                    alt="Premium wine" class="w-full h-full object-cover">
             </div>
-            <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square">
-                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480" alt="Dark atmospheric lighting" class="w-full h-full object-cover">
+
+            <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square"
+                onclick="openModal(this.querySelector('img').src, 'Glassware Collection')">
+                <img src="https://wallpapergod.com/images/hd/black-and-white-2560X1920-wallpaper-9nw87g5ioblcge21.jpeg"
+                    alt="Premium glassware" class="w-full h-full object-cover">
+            </div>
+
+            <div class="bg-gray-300 rounded-lg overflow-hidden image-hover cursor-pointer aspect-square"
+                onclick="openModal(this.querySelector('img').src, 'Intimate Setting')">
+                <img src="https://i.pinimg.com/originals/e8/53/02/e85302be49b2ef60067e7f36a6e647d0.jpg"
+                    alt="Intimate bar setting" class="w-full h-full object-cover">
+            </div>
+
+            <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square flex items-center justify-center"
+                onclick="openModal(this.querySelector('img').src, 'Neon Light')">
+                <img src="https://i.etsystatic.com/8409770/r/il/3a5d2f/6223685548/il_fullxfull.6223685548_n2s8.jpg"
+                    alt="Cocktails menu" class="w-full h-full object-cover">
+            </div>
+
+            <div class="bg-gray-200 rounded-lg overflow-hidden image-hover cursor-pointer aspect-square"
+                onclick="openModal(this.querySelector('img').src, 'Artisanal Ingredients')">
+                <img src="https://i.pinimg.com/1200x/61/ac/88/61ac88d6bb2cb36839f8cb018374aba3.jpg"
+                    alt="Artisanal cocktail ingredients" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
+
     <!-- Footer -->
-    <footer class="max-w-4xl mx-auto px-4 py-8 text-center">
+    <footer class="max-w-4xl mx-auto px-4 py-8 text-center animate-fade-in-up">
         <div class="inline-block bg-black text-white px-6 py-2 text-sm font-medium tracking-wider">
             GUEST LIST
         </div>
     </footer>
 
-     <!-- Image Modal -->
-     <div id="imageModal"
+    <!-- Image Modal -->
+    <div id="imageModal"
         class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden p-4">
         <div class="modal-content bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden">
             <div class="p-6">
@@ -95,7 +123,11 @@
             </div>
         </div>
     </div>
- </div>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop"
+        class="scroll-to-top fixed bottom-6 right-6 bg-black text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition-colors z-40">
+        ↑
+    </button>
 </body>
 </html>
