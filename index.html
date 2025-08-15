@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Hidden - An Invitation to the Hidden</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -22,18 +23,79 @@
 
     <!-- Hero Section -->
     <section class="mx-auto px-0 py-8">
-        <div class="relative w-full h-64 md:h-80 overflow-hidden">
-            <img src="https://www.humphreymunson.co.uk/app/uploads/2023/10/Sugo-Pasta-kitchen-Altrincham-Interiors-5-Italian-restaurants-we-want-to-go-to-Humphrey-Munson-Blog-3.jpg"
-                alt="Cooking Italian Food" class="w-full h-full object-cover">
+        <div class="animate-fade-in-up">
+            <div class="relative w-full h-64 md:h-80 overflow-hidden">
+                <img src="https://www.humphreymunson.co.uk/app/uploads/2023/10/Sugo-Pasta-kitchen-Altrincham-Interiors-5-Italian-restaurants-we-want-to-go-to-Humphrey-Munson-Blog-3.jpg"
+                    alt="Cooking Italian Food" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="space-y-4 flex px-10 pt-4">
+            <div class="flex flex-row gap-4">
+                <div class="flex flex-col">
+                    <span class="text-xs font-medium tracking-wider">CURATED SELECTION OF</span>
+                    <span class="font-playfair font-bold text-lg">FINE SPIRITS</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-medium tracking-wider">A HIDDEN GEM</span>
+                    <span class="font-playfair font-bold text-lg">7 NIGHTS / WEEK</span>
+                </div>
+                <p class="text-sm leading-relaxed max-w-[730px] opacity-80 pl-10">
+                    Step into a place where time slows down and the night feels endless. Our speakeasy offers a unique,
+                    intimate atmosphere, perfect for those seeking something more than the usual. Come for the
+                    experience, stay for the vibe.
+                </p>
+            </div>
         </div>
     </section>
 
+    <!-- Behind Section -->
+    <section class="mx-auto px-4 py-8">
+        <div class="text-center mb-12 animate-fade-in-up">
+            <h2 class="font-playfair font-black text-4xl md:text-5xl mb-2">BEHIND</h2>
+            <p class="text-sm tracking-wider font-bold">Closed Doors</p>
+            <p class="text-sm leading-relaxed max-w-[650px] mx-auto mt-4 opacity-80">
+                Our speakeasy offers an atmosphere that's both sleek and relaxed, perfect for those who appreciate the finer things in life. Whether you're here for a quiet drink or to linger into the night, every moment feels exclusive.
+            </p>
+        </div>
+    
+        <!-- Image Gallery -->
+        <div class="gallery-grid animate-fade-in-up">
+            <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square"
+            onclick="openModal(this.querySelector('img').src, 'Dark atmospheric lighting')">
+                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480" alt="Dark atmospheric lighting" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-gray-200 rounded-lg overflow-hidden image-hover cursor-pointer aspect-square">
+                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480" alt="Dark atmospheric lighting" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-black rounded-lg overflow-hidden image-hover cursor-pointer aspect-square">
+                <img src="https://www.shutterstock.com/shutterstock/videos/7949248/thumb/11.jpg?ip=x480" alt="Dark atmospheric lighting" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="max-w-4xl mx-auto px-4 py-8 text-center">
         <div class="inline-block bg-black text-white px-6 py-2 text-sm font-medium tracking-wider">
             GUEST LIST
         </div>
     </footer>
-</body>
 
+     <!-- Image Modal -->
+     <div id="imageModal"
+        class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden p-4">
+        <div class="modal-content bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modalTitle" class="font-playfair font-bold text-2xl"></h3>
+                    <button onclick="closeModal()"
+                        class="text-gray-500 hover:text-gray-700 text-3xl leading-none">&times;</button>
+                </div>
+                <div class="flex justify-center">
+                    <img id="modalImage" src="" alt="" class="max-w-full max-h-[60vh] object-contain rounded-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+</body>
 </html>
